@@ -1,0 +1,25 @@
+Testing Notes - Task 11 (JavaScript Fundamentals)
+
+DRAFT: I wrote these from running the page logic in a test. Open index.html in the browser,
+repeat each check with the Console (F12) open, and change any line that does not match what you see.
+
+Page load
+What I saw: name, role and summary appear from data.js. Six skill chips show, highest level first.
+Skill score reads 63% with the message "Strong foundation and growing fast." No errors in the Console.
+
+Skill search
+What I saw: typing "java" shows 1 of 6 skills. Typing "zzz" shows "No skills match". Clearing the box shows all 6.
+"Core skills only" shows 2 (HTML5 and CSS3). Search and the checkbox work together.
+
+Skill details
+What I saw: clicking a chip shows its level and years in the detail box.
+
+Contact form
+What I saw: "abc" as experience shows a friendly error (try/catch). "99" shows the 0-50 range message.
+A valid entry shows a thank-you message that changes with experience and the chosen interests, then the form resets.
+
+Console checks to try
+- filterSkills(profile.skills, "css", false)
+- calcSkillScore(profile.skills)
+- findSkill(profile.skills, "RAG")
+- parseExperience("abc")   (should throw an error)

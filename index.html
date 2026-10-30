@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Muhammad Usman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <noscript><p class="role">Please turn on JavaScript to see my profile.</p></noscript>
+      <h1 id="profile-name"></h1>
+      <p class="role" id="profile-role"></p>
+      <img class="profile-photo" src="profile-photo.jpg" alt="Profile photo of Muhammad Usman" width="200" height="200">
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#links">Links</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p class="lead" id="profile-summary"></p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-tools">
+          <label for="skill-search">Search skills</label>
+          <input type="search" id="skill-search" placeholder="Type a skill, e.g. java" autocomplete="off">
+          <label class="check"><input type="checkbox" id="core-only"> Core skills only</label>
+        </div>
+        <p id="skill-status" role="status"></p>
+        <ul class="skills" id="skill-list"></ul>
+        <p id="skill-detail" class="detail" role="status">Select a skill to see its details.</p>
+        <p id="skill-score" class="score"></p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <ol id="education-list"></ol>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul id="experience-list"></ul>
+      </section>
+
+      <section id="links">
+        <h2>Useful Links</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/">GitHub</a>
+            - my projects
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+            - my profile
+          </li>
+          <li>
+            <a href="https://www.uow.edu.pk/">University of Wah</a>
+            - where I studied
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p id="contact-info"></p>
+        <p>Fields marked with * are required.</p>
+
+        <form id="contact-form">
+
+          <fieldset>
+            <legend>Your Details</legend>
+
+            <p class="field">
+              <label for="fullname">Full name *</label>
+              <input type="text" id="fullname" name="fullname" autocomplete="name" placeholder="Your full name" required>
+            </p>
+
+            <p class="field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@gmail.com" required>
+            </p>
+
+            <p class="field">
+              <label for="birthdate">Date of birth *</label>
+              <input type="date" id="birthdate" name="birthdate" required>
+            </p>
+
+            <p class="field">
+              <label for="experience">Years of experience *</label>
+              <input type="text" inputmode="decimal" id="experience" name="experience" value="0" required>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Gender *</legend>
+            <p class="choices">
+              <input type="radio" id="gender-male" name="gender" value="male" required>
+              <label for="gender-male">Male</label>
+
+              <input type="radio" id="gender-female" name="gender" value="female">
+              <label for="gender-female">Female</label>
+
+              <input type="radio" id="gender-other" name="gender" value="other">
+              <label for="gender-other">Other</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interests</legend>
+            <p class="choices">
+              <input type="checkbox" id="interest-ai" name="interests" value="ai">
+              <label for="interest-ai">Artificial Intelligence</label>
+
+              <input type="checkbox" id="interest-web" name="interests" value="web">
+              <label for="interest-web">Web Development</label>
+
+              <input type="checkbox" id="interest-business" name="interests" value="business">
+              <label for="interest-business">Entrepreneurship</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your Message</legend>
+            <p class="field">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here" required></textarea>
+            </p>
+          </fieldset>
+
+          <p id="form-message" class="message" role="status" hidden></p>
+
+          <p class="actions">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+
+        </form>
+      </section>
+
+    </main>
+
+  </body>
+</html>
