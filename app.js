@@ -9,7 +9,6 @@ const qs = (selector) => document.querySelector(selector); // arrow function
 
 class InputError extends Error {} // errors we expect and can explain to the user
 
-/* ---------- pure helpers: no DOM, easy to test in the console ---------- */
 
 function filterSkills(list, query, coreOnly) {
   const text = query.trim().toLowerCase();
